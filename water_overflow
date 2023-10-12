@@ -1,0 +1,11 @@
+number_of_litres = int(input())
+litres_in_pool = 0
+
+for litres in range(number_of_litres):
+    litres_added = int(input())
+    litres_in_pool += litres_added
+    if litres_in_pool > 255:
+        print('Insufficient capacity!')
+        litres_in_pool -= litres_added
+
+print(litres_in_pool)
